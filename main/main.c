@@ -2,13 +2,12 @@
  #include "hardware/rtc.h"          
  #include "pico/util/datetime.h"    
  #include "pico/stdlib.h"
- #include "hardware/gpio.h"
- #include "hardware/timer.h"        
+ #include "hardware/irq.h"
  #include <stdio.h>
  #include <string.h>
  
- #define PINO_TRIGGER 10;
- #define PINO_ECHO 11;
+ #define PINO_TRIGGER 10
+ #define PINO_ECHO 11
  
  volatile absolute_time_t tempo_inicio;
  volatile absolute_time_t tempo_fim;
@@ -69,7 +68,9 @@
                                       callback_echo);
      
      int medindo = 0;
-     
+     printf("inicio\n");
+     printf("Pressione 's' para iniciar ou pausar a medicao\n");
+
      while (true) {
          // Checa entrada do usuário (não bloqueante)
          int caractere = getchar_timeout_us(500);
