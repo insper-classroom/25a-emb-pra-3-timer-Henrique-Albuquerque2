@@ -7,8 +7,8 @@
  #include <stdio.h>
  #include <string.h>
  
- int PINO_TRIGGER = 10;
- int PINO_ECHO = 11;
+ #define PINO_TRIGGER 10;
+ #define PINO_ECHO 11;
  
  volatile absolute_time_t tempo_inicio;
  volatile absolute_time_t tempo_fim;
