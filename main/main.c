@@ -88,7 +88,7 @@ int main() {
     bool leitura_ativa = false;
 
     rtc_init();
-    datetime_t tempo_inicial = {.year = 2025, .month = 3, .day = 17, .dotw = 1, .hour = 22, .min = 0, .sec = 0};
+    datetime_t tempo_inicial = {.year = 2025, .month = 3, .day = 20, .dotw = 4, .hour = 16, .min = 56, .sec = 0};
     rtc_set_datetime(&tempo_inicial);
 
     printf("Data e hora inicial configuradas\n");
